@@ -1,0 +1,38 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+/*Barva textu  #ffffff.
+Podkladová tmavě modrá  #283e50.
+Tlačítko Pravidla  #1fcca4. A po najetí myši  #1cbb96.
+Tlačítko Začít hrát  #0197f6. Po najetí  #0090e9.*/
+
+body {
+  padding: 0;
+  margin: 0;
+  background: rgb(255, 200, 218);
+  background: linear-gradient(
+    10deg,
+    rgba(255, 200, 218, 1) 0%,
+    rgba(97, 93, 173, 1) 100%
+  );
+  background-size: cover;
+}
+
+.general-container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Lobster', cursive;
+}
