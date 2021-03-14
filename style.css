@@ -22,12 +22,13 @@ body {
     rgba(255, 200, 218, 1) 0%,
     rgba(97, 93, 173, 1) 100%
   );
+  background-repeat: no-repeat;
 }
 
 .general-container {
   display: flex;
   flex-direction: column;
-  margin: 5rem auto 20rem auto;
+  margin: 3rem auto;
   width: 400px;
   border-radius: 10px 10px 0px 0px;
   text-align: center;
