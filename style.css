@@ -38,7 +38,7 @@ body {
   color: #ffffff;
 }
 
-.foto {
+.photo {
   border-radius: 10px 10px 0px 0px;
 }
 
@@ -61,19 +61,19 @@ p {
   padding: 1rem;
 }
 
-.rules {
+.btn-rules {
   background-color: #1fcca4;
   border-bottom: solid 2px #283e50;
 }
 
-.rules:hover {
+.btn-rules:hover {
   background-color: #1cbb96;
 }
 
-.play {
+.btn-play {
   background-color: #0197f6;
 }
 
-.play:hover {
+.btn-play:hover {
   background-color: #0090e9;
 }
