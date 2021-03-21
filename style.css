@@ -25,17 +25,24 @@ body {
   background-repeat: no-repeat;
 }
 
-.general-container {
+.general-container,
+.play-rules {
   display: flex;
   flex-direction: column;
   margin: 3rem auto;
-  width: 400px;
+  max-width: 400px;
   border-radius: 10px 10px 0px 0px;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
   background-color: #283e50;
   color: #ffffff;
+}
+
+.play-rules {
+  max-width: 800px;
+  text-align: unset;
+  font-size: 20px;
 }
 
 .photo {
@@ -47,6 +54,7 @@ h1 {
   font-family: 'Lobster', cursive;
   font-size: 55px;
   font-weight: 400;
+  text-align: center;
 }
 
 p {
@@ -62,6 +70,7 @@ p {
 .buttons a {
   color: #ffffff;
   text-decoration: none;
+  text-align: center;
   width: 100%;
   padding: 1rem;
 }
@@ -81,4 +90,34 @@ p {
 
 .buttons__blue:hover {
   background-color: #0090e9;
+}
+
+.description {
+  padding: 0rem 3rem 3rem 3rem;
+}
+
+.rules__item {
+  margin-top: 1rem;
+}
+
+.circle,
+.cross {
+  filter: invert(100%);
+}
+
+.image-description {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.image-description__item {
+  max-width: 40%;
+}
+
+.image-description__item img {
+  max-width: 100%;
 }
