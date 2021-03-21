@@ -54,26 +54,31 @@ p {
   margin: 0;
 }
 
-.general-container a {
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons a {
   color: #ffffff;
   text-decoration: none;
   width: 100%;
   padding: 1rem;
 }
 
-.btn-rules {
+.buttons__green {
   background-color: #1fcca4;
   border-bottom: solid 2px #283e50;
 }
 
-.btn-rules:hover {
+.buttons__green:hover {
   background-color: #1cbb96;
 }
 
-.btn-play {
+.buttons__blue {
   background-color: #0197f6;
 }
 
-.btn-play:hover {
+.buttons__blue:hover {
   background-color: #0090e9;
 }
