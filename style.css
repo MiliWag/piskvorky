@@ -15,7 +15,7 @@ Tlačítko Začít hrát  #0197f6. Po najetí  #0090e9.*/
 
 body {
   padding: 0;
-  margin: 0;
+  margin: 0 0 20rem 0;
   background: rgb(255, 200, 218);
   background: linear-gradient(
     10deg,
@@ -129,6 +129,10 @@ p {
 
   .image-description__item {
     max-width: 100%;
+  }
+
+  .general-container {
+    max-width: 80%;
   }
 }
 
