@@ -55,6 +55,7 @@ h1 {
   font-size: 55px;
   font-weight: 400;
   text-align: center;
+  color: white;
 }
 
 p {
@@ -120,6 +121,16 @@ p {
 
 .image-description__item img {
   max-width: 100%;
+}
+
+.play__navigation {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 540px) {
