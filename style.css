@@ -104,6 +104,7 @@ p {
 .circle,
 .cross {
   filter: invert(100%);
+  margin-bottom: -0.2rem;
 }
 
 .image-description {
@@ -123,7 +124,12 @@ p {
   max-width: 100%;
 }
 
-.play__navigation {
+.play {
+  max-width: 80vmin;
+  margin: 2rem auto 0rem auto;
+}
+
+.play-navigation {
   display: flex;
   justify-content: space-between;
   color: white;
@@ -131,6 +137,75 @@ p {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.5rem;
+}
+
+.play-navigation__player {
+  padding: 0;
+}
+
+.playfield {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  height: 80vmin;
+  margin-top: 1rem;
+  background: rgb(229, 182, 210);
+  background: linear-gradient(
+    10deg,
+    rgba(229, 182, 210, 1) 0%,
+    rgba(178, 148, 196, 1) 100%
+  );
+}
+
+.playfield__box {
+  border: black solid 1px;
+  background: none;
+  width: 10%;
+}
+
+.playfield__box:hover {
+  background-color: rgb(216, 182, 216);
+}
+
+.playfield__box:focus {
+  background-color: rgb(216, 182, 216);
+  outline: none;
+}
+
+/* horní řada hracího pole*/
+.playfield__box:nth-child(-n + 9) {
+  border-width: 2px 1px 1px 1px;
+}
+
+/*pravá strana*/
+.playfield__box:nth-child(10n) {
+  border-width: 1px 2px 1px 1px;
+}
+
+/*levá strana*/
+.playfield__box:nth-child(10n + 1) {
+  border-width: 1px 1px 1px 2px;
+}
+
+/*dolní řada*/
+.playfield__box:nth-child(n + 91) {
+  border-width: 1px 1px 2px 1px;
+}
+
+.playfield__box:first-child {
+  border-width: 2px 1px 1px 2px;
+}
+
+.playfield__box:last-child {
+  border-width: 1px 2px 2px 1px;
+}
+
+.playfield__box:nth-child(10) {
+  border-width: 2px 2px 1px 1px;
+}
+
+.playfield__box:nth-child(91) {
+  border-width: 1px 1px 2px 2px;
 }
 
 @media (max-width: 540px) {
