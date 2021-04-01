@@ -137,10 +137,20 @@ p {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .play-navigation__player {
   padding: 0;
+}
+
+.play-navigation__link a {
+  padding: 0.4rem 0.5rem 0.3rem 0.5rem;
+  border-radius: 10px;
+}
+
+.play-navigation__link > .buttons__green {
+  border-bottom: none;
 }
 
 .playfield {
@@ -148,7 +158,6 @@ p {
   display: flex;
   flex-wrap: wrap;
   height: 80vmin;
-  margin-top: 1rem;
   background: rgb(229, 182, 210);
   background: linear-gradient(
     10deg,
@@ -163,10 +172,7 @@ p {
   width: 10%;
 }
 
-.playfield__box:hover {
-  background-color: rgb(216, 182, 216);
-}
-
+.playfield__box:hover,
 .playfield__box:focus {
   background-color: rgb(216, 182, 216);
   outline: none;
