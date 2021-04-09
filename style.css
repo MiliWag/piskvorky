@@ -175,7 +175,6 @@ p {
 .playfield__box:hover,
 .playfield__box:focus {
   background-color: rgb(236, 209, 236);
-  outline: none;
 }
 
 /* horní řada hracího pole*/
