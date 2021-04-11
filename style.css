@@ -170,6 +170,7 @@ p {
   border: black solid 1px;
   background: none;
   width: 10%;
+  height: 10%;
 }
 
 .playfield__box:hover,
@@ -211,6 +212,28 @@ p {
 
 .playfield__box:nth-child(91) {
   border-width: 1px 1px 2px 2px;
+}
+
+/* kdo hraje */
+
+.circle-play {
+  filter: invert(100%);
+  margin-bottom: -0.2rem;
+}
+
+.circle--play {
+  visibility: hidden;
+}
+
+.cross-play {
+  visibility: hidden;
+}
+
+.cross--play {
+  visibility: visible;
+  filter: invert(100%);
+  margin-bottom: -0.2rem;
+  margin-left: -1.5rem;
 }
 
 @media (max-width: 540px) {
