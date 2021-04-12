@@ -4,7 +4,7 @@ const circlePlay = document.querySelector('#crossPlayer');
 const crossPlay = document.querySelector('#circlePlayer');
 const buttons = document.querySelectorAll('button');
 
-//změna ikony hráče v horní navigaci
+//změna ikony hráče v horní navigaci, vložení kolečka/křížku do hracího pole
 
 for (let i = 0; i < buttons.length; i += 1) {
   const button = buttons[i];
@@ -14,9 +14,11 @@ for (let i = 0; i < buttons.length; i += 1) {
     circlePlay.classList.toggle('cross--play');
 
     if (circlePlay.className === 'cross-play') {
-      button.innerHTML = `<img src="images/cross.svg" alt="čtvereček" />`;
+      button.innerHTML = `<img class ="playfield__box--content" src="images/cross.svg" alt="čtvereček" />`;
+      button.disabled = 'true';
     } else {
-      button.innerHTML = `<img src="images/circle.svg" alt="kolecko" />`;
+      button.innerHTML = `<img class ="playfield__box--content" src="images/circle.svg" alt="kolecko" />`;
+      button.disabled = 'true';
     }
   });
 }

@@ -171,6 +171,7 @@ p {
   background: none;
   width: 10%;
   height: 10%;
+  padding: 0;
 }
 
 .playfield__box:hover,
@@ -234,6 +235,21 @@ p {
   filter: invert(100%);
   margin-bottom: -0.2rem;
   margin-left: -1.5rem;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.playfield__box--content {
+  width: 70%;
+  animation: zoom 0.15s 1 ease;
 }
 
 @media (max-width: 540px) {
