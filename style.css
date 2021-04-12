@@ -248,7 +248,7 @@ p {
 }
 
 .playfield__box--content {
-  width: 70%;
+  width: 60%;
   animation: zoom 0.15s 1 ease;
 }
 
