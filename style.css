@@ -247,8 +247,21 @@ p {
   }
 }
 
-.playfield__box--content {
-  width: 60%;
+.playfield__box--content--circle {
+  background-image: url('images/circle.svg');
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  background-position: 2vmin;
+  background-size: 60%;
+  animation: zoom 0.15s 1 ease;
+}
+
+.playfield__box--content--cross {
+  background-image: url('images/cross.svg');
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position: 2vmin;
+  background-size: 60%;
   animation: zoom 0.15s 1 ease;
 }
 

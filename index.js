@@ -14,10 +14,10 @@ for (let i = 0; i < buttons.length; i += 1) {
     circlePlay.classList.toggle('cross--play');
 
     if (circlePlay.className === 'cross-play') {
-      button.innerHTML = `<img class ="playfield__box--content" src="images/cross.svg" alt="čtvereček" />`;
+      button.classList.toggle('playfield__box--content--cross');
       button.disabled = 'true';
     } else {
-      button.innerHTML = `<img class ="playfield__box--content" src="images/circle.svg" alt="kolecko" />`;
+      button.classList.toggle('playfield__box--content--circle');
       button.disabled = 'true';
     }
   });
