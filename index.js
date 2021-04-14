@@ -1,7 +1,7 @@
 'use strict';
 
-const circlePlay = document.querySelector('#crossPlayer');
-const crossPlay = document.querySelector('#circlePlayer');
+const circlePlay = document.querySelector('#circle-player');
+const crossPlay = document.querySelector('#cross-player');
 const buttons = document.querySelectorAll('button');
 
 //změna ikony hráče v horní navigaci, vložení kolečka/křížku do hracího pole
@@ -10,10 +10,10 @@ for (let i = 0; i < buttons.length; i += 1) {
   const button = buttons[i];
 
   button.addEventListener('click', () => {
-    crossPlay.classList.toggle('circle--play');
-    circlePlay.classList.toggle('cross--play');
+    circlePlay.classList.toggle('circle-not-play');
+    crossPlay.classList.toggle('cross-play');
 
-    if (circlePlay.className === 'cross-play') {
+    if (circlePlay.className === 'circle-play') {
       button.classList.toggle('playfield__box--content--cross');
       button.disabled = 'true';
     } else {

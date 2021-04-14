@@ -222,15 +222,15 @@ p {
   margin-bottom: -0.2rem;
 }
 
-.circle--play {
+.circle-not-play {
+  visibility: hidden;
+}
+
+.cross-not-play {
   visibility: hidden;
 }
 
 .cross-play {
-  visibility: hidden;
-}
-
-.cross--play {
   visibility: visible;
   filter: invert(100%);
   margin-bottom: -0.2rem;
@@ -251,7 +251,7 @@ p {
   background-image: url('images/circle.svg');
   background-repeat: no-repeat;
   background-origin: content-box;
-  background-position: 2vmin;
+  background-position: 1.5vmin;
   background-size: 60%;
   animation: zoom 0.15s 1 ease;
 }
@@ -260,7 +260,7 @@ p {
   background-image: url('images/cross.svg');
   background-repeat: no-repeat;
   background-origin: border-box;
-  background-position: 2vmin;
+  background-position: 1.5vmin;
   background-size: 60%;
   animation: zoom 0.15s 1 ease;
 }
