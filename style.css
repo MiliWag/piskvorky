@@ -93,6 +93,8 @@ p {
   background-color: #0090e9;
 }
 
+/* pravidla.html */
+
 .description {
   padding: 0rem 3rem 3rem 3rem;
 }
@@ -123,6 +125,8 @@ p {
 .image-description__item img {
   max-width: 100%;
 }
+
+/* hra.html */
 
 .play {
   max-width: 80vmin;
@@ -215,7 +219,7 @@ p {
   border-width: 1px 1px 2px 2px;
 }
 
-/* kdo hraje */
+/* styly pro javascript - kdo hraje */
 
 .circle-play {
   filter: invert(100%);
@@ -235,6 +239,7 @@ p {
   filter: invert(100%);
   margin-bottom: -0.2rem;
   margin-left: -1.5rem;
+  width: 20%;
 }
 
 @keyframes zoom {
@@ -264,6 +269,8 @@ p {
   background-size: 60%;
   animation: zoom 0.15s 1 ease;
 }
+
+/* responzivita */
 
 @media (max-width: 540px) {
   .description {
