@@ -7,7 +7,8 @@ const buttons = document.querySelectorAll('.playfield__box');
 // Funkce pro změnu ikony hráče v horní navigaci + vložení kolečka/křížku do hracího pole
 
 buttons.forEach((button) => {
-  button.addEventListener('click', () => {
+  button.addEventListener('click', (e) => {
+    const buttonAfterClick = e.target;
     circlePlay.classList.toggle('circle-not-play');
     crossPlay.classList.toggle('cross-play');
 
@@ -19,10 +20,24 @@ buttons.forEach((button) => {
       button.disabled = 'true';
     }
 
-    isWinningMove(button);
-    console.log(isWinningMove(button));
+    isWinningMove(buttonAfterClick);
+    if (isWinningMove(buttonAfterClick) === true) {
+      confirm(confirmMessage());
+      location.reload();
+    }
+    console.log(isWinningMove(buttonAfterClick));
   });
 });
+
+// Text zprávy, která říká, kdo vyhrál
+
+const confirmMessage = () => {
+  if (circlePlay.className === 'circle-play') {
+    return 'Vyhrál křížek. Spustit novou hru?';
+  } else {
+    return 'Vyhrálo kolečko. Spustit novou hru?';
+  }
+};
 
 // ------------------kontrola, kdo vyhrál-----------------------
 
@@ -64,16 +79,6 @@ const getSymbol = (button) => {
 
 console.log(getSymbol(buttons[99]));
 
-// Text zprávy, která říká, kdo vyhrál
-
-const confirmMessage = () => {
-  if (circlePlay.className === 'circle-play') {
-    return 'Vyhrál křížek. Spustit novou hru?';
-  } else {
-    return 'Vyhrálo kolečko. Spustit novou hru?';
-  }
-};
-
 // Funkce, která zjistí, jestli je v řádku nebo ve sloupci vedle sebe 5 stejných symbolů
 
 const symbolsToWin = 5;
@@ -102,7 +107,7 @@ const isWinningMove = (button) => {
   }
 
   if (inRow >= symbolsToWin) {
-    return true && confirm(confirmMessage()) && location.reload();
+    return true;
   }
 
   let inColumn = 1;
@@ -124,7 +129,7 @@ const isWinningMove = (button) => {
   }
 
   if (inColumn >= symbolsToWin) {
-    return true && confirm(confirmMessage()) && location.reload();
+    return true;
   }
 
   return false;
