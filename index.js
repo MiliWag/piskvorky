@@ -15,27 +15,28 @@ buttons.forEach((button) => {
     if (circlePlay.className === 'circle-play') {
       button.classList.toggle('playfield__box--content--cross');
       button.disabled = 'true';
+
+      isWinningMove(buttonAfterClick);
+      if (isWinningMove(buttonAfterClick) === true) {
+        reloadPage('Vyhrál křížek. Spustit novou hru?');
+      }
     } else {
       button.classList.toggle('playfield__box--content--circle');
       button.disabled = 'true';
-    }
 
-    isWinningMove(buttonAfterClick);
-    if (isWinningMove(buttonAfterClick) === true) {
-      confirm(confirmMessage());
-      location.reload();
+      isWinningMove(buttonAfterClick);
+      if (isWinningMove(buttonAfterClick) === true) {
+        reloadPage('Vyhrálo kolečko. Spustit novou hru?');
+      }
     }
-    console.log(isWinningMove(buttonAfterClick));
   });
 });
 
-// Text zprávy, která říká, kdo vyhrál
+// Znovunačtení stránky po potvrzení confirm
 
-const confirmMessage = () => {
-  if (circlePlay.className === 'circle-play') {
-    return 'Vyhrál křížek. Spustit novou hru?';
-  } else {
-    return 'Vyhrálo kolečko. Spustit novou hru?';
+const reloadPage = (message) => {
+  if (confirm(message) === true) {
+    location.reload();
   }
 };
 
