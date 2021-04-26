@@ -88,6 +88,7 @@ const isWinningMove = (button) => {
   const symbol = getSymbol(button);
 
   let i;
+  let a;
 
   let inRow = 1; // Jednička pro právě vybrané políčko
   // Koukni doleva
@@ -130,6 +131,66 @@ const isWinningMove = (button) => {
   }
 
   if (inColumn >= symbolsToWin) {
+    return true;
+  }
+
+  //Výhra v diagonále
+  //doleva nahoru
+  let diagonalLeft = 1;
+  a = origin.row;
+  i = origin.column;
+
+  while (a > 0 && i > 0 && symbol === getSymbol(getField(a - 1, i - 1))) {
+    diagonalLeft++;
+    a--;
+    i--;
+  }
+  // doprava dolu
+  a = origin.row;
+  i = origin.column;
+
+  while (
+    a < boardSize - 1 &&
+    i < boardSize - 1 &&
+    symbol === getSymbol(getField(a + 1, i + 1))
+  ) {
+    diagonalLeft++;
+    a++;
+    i++;
+  }
+  if (diagonalLeft >= symbolsToWin) {
+    return true;
+  }
+
+  // doprava nahoru
+  let diagonalRight = 1;
+  a = origin.row;
+  i = origin.column;
+
+  while (
+    a > 0 &&
+    i < boardSize - 1 &&
+    symbol == getSymbol(getField(a - 1, i + 1))
+  ) {
+    diagonalRight++;
+    a--;
+    i++;
+  }
+
+  //doleva dolu
+  a = origin.row;
+  i = origin.column;
+
+  while (
+    a < boardSize - 1 &&
+    i > 0 &&
+    symbol === getSymbol(getField(a + 1, i - 1))
+  ) {
+    diagonalRight++;
+    a++;
+    i--;
+  }
+  if (diagonalRight >= symbolsToWin) {
     return true;
   }
 
